@@ -118,6 +118,11 @@ class PagesController extends Controller
 
     public function display()
     {
-        return 'The age is greate than 200';
+        if($request->input('age') <= 200){
+            return redirect('/');
+        }else{
+            return 'The age is greate than 200';
+        }//control structure
+        
     }
 }

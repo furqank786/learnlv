@@ -114,3 +114,10 @@ Route::get('/about/{designation}/{year}','PagesController@about');
  Route::get('pages/display/{age}', ['middleware' => 'cutomMiddle', function ($age) {
     return view('pages.display',['age' => $age]);
 }]);
+
+ Route::get('testing', function(){
+    $age = 49;
+
+    ///return 'testing...';
+     return view('pages.Contact',['age' => $age]);
+ });
